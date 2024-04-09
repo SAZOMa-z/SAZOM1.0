@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2 # checkout the repository content to github runner
 
       - name: setup python
-        uses: actions/setup-python@v4
+        uses: actions/SAZOM@v4
         with:
           python-version: '3.9' # install the python version needed
           
@@ -24,13 +24,13 @@ jobs:
           
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+          SOME_SECRET: ${{ secrets.TOKEN_SAZOM }}
         run: python main.py
           
       - name: commit files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "sazomcp@gmail.com"
+          git config --local user.name "SAZOMa-z"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
           
