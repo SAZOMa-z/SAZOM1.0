@@ -1,0 +1,8 @@
+telebot
+rembg
+pillow
+pytube
+gtts
+speedtest
+speedtest-cli
+moviepy
